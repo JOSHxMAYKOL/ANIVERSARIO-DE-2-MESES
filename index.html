@@ -3,10 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Para Mi Amor, Maribel</title>
+    <title>Para Mi Amor, Maribel ❤️</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+    <video autoplay muted loop id="bg-video">
+        <source src="video1.mp4" type="video/mp4">
+        Tu navegador no soporta video.
+    </video>
 
     <div class="book-container">
         <div id="book" class="book">
@@ -17,19 +22,29 @@
             <div id="p1" class="paper">
                 <div class="front">
                     <div class="content">
-                        <h2 class="title">Para Maribel ✨</h2>
-                        <p class="text">Lo que hay dentro de estas páginas es solo un pedacito de todo lo que mi alma guarda para ti.</p>
-                        <div class="decor-mush">🍄❤️</div>
+                        <h2 class="title">Nuestra Historia ✨</h2>
+                        <div id="clock-title">Tiempo a tu lado:</div>
+                        <div id="counter-container">
+                            <div class="time-box"><span id="months">0</span><p>Meses</p></div>
+                            <div class="time-box"><span id="days">0</span><p>Días</p></div>
+                            <div class="time-box"><span id="hours">0</span><p>Hrs</p></div>
+                            <div class="time-box"><span id="minutes">0</span><p>Min</p></div>
+                            <div class="time-box"><span id="seconds">0</span><p>Seg</p></div>
+                        </div>
+                        <div class="photo-frame main-photo">
+                            <img src="portada.jpg" alt="Portada">
+                        </div>
+                        <p class="text">Desde el 04 de Diciembre, 2025</p>
                     </div>
-                    <button class="btn-next">Abrir mi corazón</button>
+                    <button class="btn-next">Abrir Libro</button>
                 </div>
                 <div class="back">
                     <div class="content">
                         <div class="photo-frame">
-                            <img src="foto1.jpg" alt="Nuestro inicio">
+                            <img src="foto1.jpg" alt="Foto 1">
                         </div>
                         <h2 class="title">Nuestro Inicio</h2>
-                        <p class="text">"No buscaba nada, pero cuando apareciste, comprendí que lo encontré todo. Eres la casualidad más perfecta que la vida me ha regalado."</p>
+                        <p class="text">"Eres la casualidad más bonita que llegó a mi vida."</p>
                     </div>
                     <button class="btn-prev">Anterior</button>
                 </div>
@@ -38,17 +53,21 @@
             <div id="p2" class="paper">
                 <div class="front">
                     <div class="content">
-                        <h2 class="title">Lo que Amo de Ti</h2>
-                        <p class="text">Amo cómo iluminas cualquier lugar. Tu inteligencia me cautiva, tu lealtad me da paz y tu sonrisa es, sin duda, mi refugio favorito en este mundo.</p>
+                        <div class="photo-frame">
+                            <img src="foto2.jpg" alt="Foto 2">
+                        </div>
+                        <h2 class="title">Tu Sonrisa</h2>
+                        <p class="text">Amo cómo iluminas todo a tu alrededor con solo sonreír.</p>
                     </div>
                     <button class="btn-next">Siguiente →</button>
                 </div>
                 <div class="back">
                     <div class="content">
                         <div class="photo-frame">
-                            <img src="foto2.jpg" alt="Tu mirada">
+                            <img src="foto3.jpg" alt="Foto 3">
                         </div>
-                        <p class="text">"Podría mirar tus ojos toda la vida y siempre encontraría algo nuevo que me haga volver a enamorarme de ti."</p>
+                        <h2 class="title">Tu Esencia</h2>
+                        <p class="text">Tu inteligencia y bondad me inspiran cada día.</p>
                     </div>
                     <button class="btn-prev">Anterior</button>
                 </div>
@@ -57,17 +76,21 @@
             <div id="p3" class="paper">
                 <div class="front">
                     <div class="content">
-                        <h2 class="title">Cada Instante Contigo</h2>
-                        <p class="text">No importa si es una gran aventura o una tarde tranquila; si es contigo, es el mejor plan posible. Gracias por hacer que lo ordinario sea extraordinario.</p>
+                        <div class="photo-frame">
+                            <img src="foto4.jpg" alt="Foto 4">
+                        </div>
+                        <h2 class="title">Momentos</h2>
+                        <p class="text">Cada segundo contigo es un tesoro que guardo con amor.</p>
                     </div>
                     <button class="btn-next">Siguiente →</button>
                 </div>
                 <div class="back">
                     <div class="content">
                         <div class="photo-frame">
-                            <img src="foto3.jpg" alt="Nuestras risas">
+                            <img src="foto5.jpg" alt="Foto 5">
                         </div>
-                        <p class="text">"Nuestra historia es mi favorita, y cada recuerdo que construimos es un tesoro que guardo con llave en mi pecho."</p>
+                        <h2 class="title">Aventuras</h2>
+                        <p class="text">Gracias por ser mi mejor compañera de viajes y de vida.</p>
                     </div>
                     <button class="btn-prev">Anterior</button>
                 </div>
@@ -76,17 +99,21 @@
             <div id="p4" class="paper">
                 <div class="front">
                     <div class="content">
+                        <div class="photo-frame">
+                            <img src="foto6.jpg" alt="Foto 6">
+                        </div>
                         <h2 class="title">Mi Promesa</h2>
-                        <p class="text">Prometo cuidarte, escucharte y ser ese lugar seguro donde siempre puedas volver. En tus días de sol y en tus tormentas, siempre estaré sosteniendo tu mano.</p>
+                        <p class="text">Prometo cuidarte y estar contigo en cada paso que demos.</p>
                     </div>
                     <button class="btn-next">Siguiente →</button>
                 </div>
                 <div class="back">
                     <div class="content">
                         <div class="photo-frame">
-                            <img src="foto4.jpg" alt="Juntos">
+                            <img src="foto7.jpg" alt="Foto 7">
                         </div>
-                        <p class="text">"Te elijo hoy, mañana y cada día que la vida nos permita despertar bajo el mismo cielo."</p>
+                        <h2 class="title">Tu Apoyo</h2>
+                        <p class="text">Gracias por ser mi lugar seguro y mi fuerza.</p>
                     </div>
                     <button class="btn-prev">Anterior</button>
                 </div>
@@ -95,17 +122,21 @@
             <div id="p5" class="paper">
                 <div class="front">
                     <div class="content">
-                        <h2 class="title">Nuestro Camino</h2>
-                        <p class="text">Me emociona pensar en todo lo que nos falta por vivir: los viajes, los sueños que cumpliremos y los desafíos que venceremos hombro con hombro. Eres mi mejor equipo.</p>
+                        <div class="photo-frame">
+                            <img src="foto8.jpg" alt="Foto 8">
+                        </div>
+                        <h2 class="title">Nuestro Futuro</h2>
+                        <p class="text">Me emociona todo lo que vamos a construir juntos.</p>
                     </div>
                     <button class="btn-next">Siguiente →</button>
                 </div>
                 <div class="back">
                     <div class="content">
                         <div class="photo-frame">
-                            <img src="foto5.jpg" alt="Sueños">
+                            <img src="foto9.jpg" alt="Foto 9">
                         </div>
-                        <p class="text">"No sé exactamente hacia dónde vamos, pero sí sé que quiero ir de tu mano hasta el final."</p>
+                        <h2 class="title">Complicidad</h2>
+                        <p class="text">Eres mi mejor amiga, mi esposa y mi gran amor.</p>
                     </div>
                     <button class="btn-prev">Anterior</button>
                 </div>
@@ -114,22 +145,23 @@
             <div id="p6" class="paper">
                 <div class="front">
                     <div class="content">
+                        <div class="photo-frame">
+                            <img src="foto10.jpg" alt="Foto 10">
+                        </div>
                         <h2 class="title">Por Siempre ❤️</h2>
-                        <p class="text">Gracias por existir y por dejarme amarte. Eres el amor de mi vida y mi mayor orgullo. Te amo hoy más que ayer, pero mucho menos que mañana.</p>
-                        <p class="text" style="font-size: 0.9rem; margin-top: 15px;">Con todo mi amor, para siempre.</p>
+                        <p class="text">Te amo más de lo que las palabras pueden expresar.</p>
                     </div>
                     <button class="btn-next">Finalizar</button>
                 </div>
                 <div class="back">
                     <div class="content">
-                        <h2 class="title">Fin del Capítulo</h2>
-                        <p class="text">Pero nuestra historia real apenas comienza...</p>
+                        <h2 class="title">Fin</h2>
+                        <p class="text">Nuestra historia real apenas comienza, Maribel.</p>
                         <div class="decor-mush">🍄🍄</div>
                     </div>
                     <button class="btn-prev">Volver a leer</button>
                 </div>
             </div>
-
         </div>
     </div>
 
