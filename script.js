@@ -7,7 +7,6 @@ let currentLocation = 1;
 let numOfPapers = papers.length;
 let maxLocation = numOfPapers + 1;
 
-// Inicializar z-index al cargar
 function init() {
     papers.forEach((paper, index) => {
         paper.style.zIndex = numOfPapers - index;
@@ -32,7 +31,6 @@ function goNextPage() {
         const paper = document.querySelector(`#p${currentLocation}`);
         paper.classList.add("flipped");
         
-        // El z-index cambia después de la animación para que se apilen bien
         setTimeout(() => {
             paper.style.zIndex = currentLocation;
         }, 300);
@@ -50,7 +48,7 @@ function goPrevPage() {
         const paper = document.querySelector(`#p${currentLocation}`);
         paper.classList.remove("flipped");
         
-        // Al volver, se pone encima inmediatamente
+        // Corregido: Ajuste de z-index inmediato al volver
         paper.style.zIndex = numOfPapers - currentLocation + 1;
 
         if(currentLocation === 1) closeBook(true);
@@ -58,6 +56,5 @@ function goPrevPage() {
     }
 }
 
-// Eventos
 nextBtns.forEach(btn => btn.addEventListener("click", goNextPage));
 prevBtns.forEach(btn => btn.addEventListener("click", goPrevPage));
