@@ -1,18 +1,19 @@
-const prevBtn = document.querySelector("#prev-btn");
-const nextBtn = document.querySelector("#next-btn");
 const book = document.querySelector("#book");
+const papers = document.querySelectorAll(".paper");
+const nextBtns = document.querySelectorAll(".btn-next");
+const prevBtns = document.querySelectorAll(".btn-prev");
 
-const paper1 = document.querySelector("#p1");
-const paper2 = document.querySelector("#p2");
-
-// Event Listeners
-nextBtn.addEventListener("click", goNextPage);
-prevBtn.addEventListener("click", goPrevPage);
-
-// Lógica
 let currentLocation = 1;
-let numOfPapers = 2; // Cambia esto a 10 cuando agregues todas
+let numOfPapers = papers.length;
 let maxLocation = numOfPapers + 1;
+
+// Inicializar z-index al cargar
+function init() {
+    papers.forEach((paper, index) => {
+        paper.style.zIndex = numOfPapers - index;
+    });
+}
+init();
 
 function openBook() {
     book.style.transform = "translateX(50%)";
@@ -28,37 +29,35 @@ function closeBook(isAtBeginning) {
 
 function goNextPage() {
     if(currentLocation < maxLocation) {
-        switch(currentLocation) {
-            case 1:
-                openBook();
-                paper1.classList.add("flipped");
-                paper1.style.zIndex = 1;
-                break;
-            case 2:
-                paper2.classList.add("flipped");
-                paper2.style.zIndex = 2;
-                break;
-            // Añade más casos aquí para las 10 páginas
-            default:
-                throw new Error("Estado desconocido");
-        }
+        const paper = document.querySelector(`#p${currentLocation}`);
+        paper.classList.add("flipped");
+        
+        // El z-index cambia después de la animación para que se apilen bien
+        setTimeout(() => {
+            paper.style.zIndex = currentLocation;
+        }, 300);
+
+        if(currentLocation === 1) openBook();
+        if(currentLocation === numOfPapers) closeBook(false);
+
         currentLocation++;
     }
 }
 
 function goPrevPage() {
     if(currentLocation > 1) {
-        switch(currentLocation) {
-            case 2:
-                closeBook(true);
-                paper1.classList.remove("flipped");
-                paper1.style.zIndex = 10;
-                break;
-            case 3:
-                paper2.classList.remove("flipped");
-                paper2.style.zIndex = 9;
-                break;
-        }
         currentLocation--;
+        const paper = document.querySelector(`#p${currentLocation}`);
+        paper.classList.remove("flipped");
+        
+        // Al volver, se pone encima inmediatamente
+        paper.style.zIndex = numOfPapers - currentLocation + 1;
+
+        if(currentLocation === 1) closeBook(true);
+        if(currentLocation === numOfPapers) openBook();
     }
 }
+
+// Eventos
+nextBtns.forEach(btn => btn.addEventListener("click", goNextPage));
+prevBtns.forEach(btn => btn.addEventListener("click", goPrevPage));

@@ -3,45 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nuestro Libro Especial</title>
+    <title>Nuestro Álbum de Recuerdos</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="book-container">
-        <button id="prev-btn">⬅️</button>
 
+    <div class="book-container">
         <div id="book" class="book">
+            <div class="spine">
+                <div class="rings-container"></div>
+            </div>
+
             <div id="p1" class="paper">
                 <div class="front">
-                    <div id="f1" class="front-content">
-                        <h1>Para ti</h1>
-                        <p>Haz clic en siguiente para empezar...</p>
+                    <div class="content">
+                        <h2 class="title">Nuestro Comienzo ✨</h2>
+                        <p class="text">Eres la casualidad más bonita que me ha pasado.</p>
+                        <div class="decor-mush">🍄</div>
                     </div>
+                    <button class="btn-next">Abrir Cuaderno</button>
                 </div>
                 <div class="back">
-                    <div id="b1" class="back-content">
-                        <img src="https://via.placeholder.com/250" alt="Foto 1">
+                    <div class="content">
+                        <div class="photo-frame">
+                            <img src="foto1.jpg" alt="Recuerdo 1">
+                        </div>
+                        <p class="text">El primer momento que capturamos.</p>
                     </div>
+                    <button class="btn-prev">Anterior</button>
                 </div>
             </div>
 
             <div id="p2" class="paper">
                 <div class="front">
-                    <div id="f2" class="front-content">
-                        <h2>Lo que amo de ti</h2>
-                        <p>Amo tu sonrisa y tu inteligencia...</p>
+                    <div class="content">
+                        <h2 class="title">Lo que Amo de Ti</h2>
+                        <p class="text">Amo tu sonrisa, tu inteligencia y tu lealtad.</p>
+                    </div>
+                    <button class="btn-next">Siguiente →</button>
+                </div>
+                <div class="back">
+                    <div class="content">
+                        <div class="photo-frame">
+                            <img src="foto2.jpg" alt="Recuerdo 2">
+                        </div>
+                    </div>
+                    <button class="btn-prev">Anterior</button>
+                </div>
+            </div>
+
+            <div id="p3" class="paper">
+                <div class="front">
+                    <div class="content">
+                        <h2 class="title">Por Siempre ❤️</h2>
+                        <p class="text">Gracias por cada aventura juntos. ¡Te amo!</p>
                     </div>
                 </div>
                 <div class="back">
-                    <div id="b2" class="back-content">
-                        <h2>Nuestra Historia</h2>
+                    <div class="content">
+                        <h2 class="title">Fin</h2>
                     </div>
+                    <button class="btn-prev">Volver al inicio</button>
                 </div>
             </div>
-
-            </div>
-
-        <button id="next-btn">➡️</button>
+        </div>
     </div>
 
     <script src="script.js"></script>
